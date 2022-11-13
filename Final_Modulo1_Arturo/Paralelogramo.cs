@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Final_Modulo1_Arturo
 {
-    public class Paralelogramo
+    public class Paralelogramo : FiguraGeometrica, Poligono
     {
         /*
-        Paralelogramo:
+        Paralelogramo :
 
 
            .----------
@@ -15,10 +15,22 @@ namespace Final_Modulo1_Arturo
          .         .ladoinclinado
         .angulo   .
         ----------
-          ladobase
+         ladobase
          */
         public double ladobase { get; set; }
         public double ladoinclinado { get; set; }
         public int angulo { get; set; }
+        public double area(double valor1, double valor2)
+        {
+            return (valor1 * valor2);
+        }
+        public string ToString()
+        {
+            return (nombre + " " + area(ladobase, altura()).ToString());
+        }
+        public double altura()
+        {
+            return (Math.Sin(angulo)*ladoinclinado);
+        }
     }
 }
