@@ -13,7 +13,7 @@ namespace Final_Modulo1_Arturo
         {
             return (valor1 * valor2);
         }
-        public string ToString()
+        public string toString()
         {
             return (nombre + " " + area(ladobase, ladoalto).ToString());
         }

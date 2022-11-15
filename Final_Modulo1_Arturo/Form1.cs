@@ -69,5 +69,23 @@ namespace Final_Modulo1_Arturo
             mensaje = "";
 
         }
+
+        private void crearrec_Click(object sender, EventArgs e)
+        {
+            mensaje += verificanombre(nombrerec.Text) + verificalado(ladobaserec.Text, "base") + verificalado(ladoaltorec.Text, "alto");
+            if (mensaje == "")
+            {
+                Rectangulo r1 = new Rectangulo();
+                r1.nombre = nombrerec.Text;
+                r1.ladobase = Convert.ToDouble(ladobaserec.Text);
+                r1.ladoalto = Convert.ToDouble(ladoaltorec.Text);
+                Pila.Push(r1);
+            }
+            else
+            {
+                MessageBox.Show(mensaje);
+            }
+            mensaje = "";
+        }
     }
 }

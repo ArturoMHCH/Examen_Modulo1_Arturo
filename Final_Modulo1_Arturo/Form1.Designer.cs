@@ -216,6 +216,7 @@
             this.crearrec.TabIndex = 11;
             this.crearrec.Text = "Crear";
             this.crearrec.UseVisualStyleBackColor = false;
+            this.crearrec.Click += new System.EventHandler(this.crearrec_Click);
             // 
             // label7
             // 
