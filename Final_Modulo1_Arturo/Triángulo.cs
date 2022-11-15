@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 
 namespace Final_Modulo1_Arturo
@@ -14,8 +15,8 @@ namespace Final_Modulo1_Arturo
                       .     .
                      .       . 
                     .         .
-         ladoizq   .  angulo   . ladoder
-                  .   arriba    .
+         ladoizq   .           . 
+                  .             .
                  .               .
                 .                 .
                .                   .
@@ -25,42 +26,36 @@ namespace Final_Modulo1_Arturo
            .                           .
           .                             .
          .                               .
-        .anguloizq              anguloder .                         
+        .anguloizq                        .                         
         ------------------------------------
                       ladobase
 
          */
         public double ladoizq { get; set; }
-        public double ladoder { get; set; }
         public double ladobase { get; set; }
         public int anguloizq { get; set; }
-        public int anguloder { get; set; }
         public double area(double valor1, double valor2)
         {
             return ((valor1*valor2) / 2);
         }
-        public string ToString()
+        public string toString()
         {
             return (nombre + " "+area(ladobase, altura()).ToString());
         }
         public double altura()
         {
-            if (anguloizq==90)
+            if (anguloizq == 90)
             {
                 return ladoizq;
             }
-            else if (anguloder==90)
-            {
-                return ladoder;
-            }
             else
             {
-                return (ladoizq*Math.Sin(anguloizq));
+                if (anguloizq<90)
+                    return (ladoizq * (Math.Sin((anguloizq * (Math.PI)) / 180)));
+                else
+                    return (ladoizq * (Math.Sin(((180-anguloizq) * (Math.PI)) / 180)));
             }
+
         }
-        public int anguloarriba()
-        {
-            return (180-anguloizq-anguloder);
-        }
-}
+    }
 }
