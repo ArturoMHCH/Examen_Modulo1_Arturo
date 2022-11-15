@@ -306,6 +306,7 @@
             this.crearpar.TabIndex = 11;
             this.crearpar.Text = "Crear";
             this.crearpar.UseVisualStyleBackColor = false;
+            this.crearpar.Click += new System.EventHandler(this.crearpar_Click);
             // 
             // ladoinclinadopar
             // 

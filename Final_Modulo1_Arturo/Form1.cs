@@ -19,7 +19,7 @@ namespace Final_Modulo1_Arturo
         {
             InitializeComponent();
         }
-        //Metodos para verificar las cajas de texto
+        //Metodos para verificar las cajas de texto y reutilizar codigo
         private string verificanombre(string textbox){
             return (textbox == "") ? "Nombre vacio;" : "";
         }
@@ -69,7 +69,7 @@ namespace Final_Modulo1_Arturo
             mensaje = "";
 
         }
-
+        //Boton para crear rectangulo
         private void crearrec_Click(object sender, EventArgs e)
         {
             mensaje += verificanombre(nombrerec.Text) + verificalado(ladobaserec.Text, "base") + verificalado(ladoaltorec.Text, "alto");
@@ -80,6 +80,25 @@ namespace Final_Modulo1_Arturo
                 r1.ladobase = Convert.ToDouble(ladobaserec.Text);
                 r1.ladoalto = Convert.ToDouble(ladoaltorec.Text);
                 Pila.Push(r1);
+            }
+            else
+            {
+                MessageBox.Show(mensaje);
+            }
+            mensaje = "";
+        }
+        //Boton para crear paralelogramo
+        private void crearpar_Click(object sender, EventArgs e)
+        {
+            mensaje += verificanombre(nombrepar.Text) + verificalado(ladobasepar.Text, "base") + verificalado(ladoinclinadopar.Text, "inclinado") + verificaangulo(angulopar.Text);
+            if (mensaje == "")
+            {
+                Paralelogramo p1 = new Paralelogramo();
+                p1.nombre = nombrepar.Text;
+                p1.ladobase = Convert.ToDouble(ladobasepar.Text);
+                p1.ladoinclinado = Convert.ToDouble(ladoinclinadopar.Text);
+                p1.angulo = Convert.ToInt32(angulopar.Text);
+                Pila.Push(p1);
             }
             else
             {
