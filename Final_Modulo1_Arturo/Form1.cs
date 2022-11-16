@@ -62,6 +62,11 @@ namespace Final_Modulo1_Arturo
                 t1.ladobase = Convert.ToDouble(ladobasetri.Text);
                 t1.anguloizq = Convert.ToInt32(angulotri.Text);
                 Pila.Push(t1);
+                MessageBox.Show("Triangulo creado con exito");
+                nombretri.Text="";
+                ladoizqtri.Text="";
+                ladobasetri.Text="";
+                angulotri.Text="";
             }
             else
             {
@@ -81,6 +86,10 @@ namespace Final_Modulo1_Arturo
                 r1.ladobase = Convert.ToDouble(ladobaserec.Text);
                 r1.ladoalto = Convert.ToDouble(ladoaltorec.Text);
                 Pila.Push(r1);
+                MessageBox.Show("El cuadrado se creo con exito");
+                nombrerec.Text="";
+                ladobaserec.Text="";
+                ladoaltorec.Text="";
             }
             else
             {
@@ -100,6 +109,11 @@ namespace Final_Modulo1_Arturo
                 p1.ladoinclinado = Convert.ToDouble(ladoinclinadopar.Text);
                 p1.angulo = Convert.ToInt32(angulopar.Text);
                 Pila.Push(p1);
+                MessageBox.Show("Paralelogramo creado con exito");
+                nombrepar.Text="";
+                ladobasepar.Text="";
+                ladoinclinadopar.Text="";
+                angulopar.Text="";
             }
             else
             {
