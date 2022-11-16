@@ -59,8 +59,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Contenido = new System.Windows.Forms.Label();
             this.mostrarpila = new System.Windows.Forms.Button();
+            this.mostrardatos = new System.Windows.Forms.Button();
+            this.datos = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -360,6 +363,9 @@
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Teal;
             this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.datos);
+            this.groupBox4.Controls.Add(this.mostrardatos);
+            this.groupBox4.Controls.Add(this.Contenido);
             this.groupBox4.Controls.Add(this.mostrarpila);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.groupBox4.Location = new System.Drawing.Point(22, 252);
@@ -369,14 +375,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Pila de Poligonos";
             // 
-            // label11
+            // Contenido
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 59);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(173, 15);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Contenido de pila de poligonos";
+            this.Contenido.AutoSize = true;
+            this.Contenido.Location = new System.Drawing.Point(20, 59);
+            this.Contenido.Name = "Contenido";
+            this.Contenido.Size = new System.Drawing.Size(173, 15);
+            this.Contenido.TabIndex = 1;
+            this.Contenido.Text = "Contenido de pila de poligonos";
             // 
             // mostrarpila
             // 
@@ -387,6 +393,33 @@
             this.mostrarpila.TabIndex = 0;
             this.mostrarpila.Text = "Mostrar pila";
             this.mostrarpila.UseVisualStyleBackColor = true;
+            this.mostrarpila.Click += new System.EventHandler(this.mostrarpila_Click);
+            // 
+            // mostrardatos
+            // 
+            this.mostrardatos.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.mostrardatos.Location = new System.Drawing.Point(733, 23);
+            this.mostrardatos.Name = "mostrardatos";
+            this.mostrardatos.Size = new System.Drawing.Size(94, 23);
+            this.mostrardatos.TabIndex = 2;
+            this.mostrardatos.Text = "Mostrar datos";
+            this.mostrardatos.UseVisualStyleBackColor = true;
+            // 
+            // datos
+            // 
+            this.datos.Location = new System.Drawing.Point(619, 24);
+            this.datos.Name = "datos";
+            this.datos.Size = new System.Drawing.Size(100, 23);
+            this.datos.TabIndex = 13;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(454, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(159, 15);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Nombre  para mostrar datos:";
             // 
             // Form1
             // 
@@ -438,7 +471,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label Contenido;
         private System.Windows.Forms.Button mostrarpila;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox angulopar;
@@ -446,5 +479,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox datos;
+        private System.Windows.Forms.Button mostrardatos;
     }
 }
