@@ -22,7 +22,24 @@ namespace Final_Modulo1_Arturo
         }
         //Metodos para verificar las cajas de texto y reutilizar codigo
         private string verificanombre(string textbox){
-            return (textbox == "") ? "Nombre vacio;" : "";
+            string resp = "";
+            if (textbox == "") 
+                resp="Nombre vacio; ";
+            else
+            {
+                //Con esto verifico que no haya nombres duplicados en la pila
+                foreach (var dato in Pila)
+                {
+                    if (dato.nombre == textbox)
+                    {
+                        resp="Ya existe ese nombre; ";
+                        break;
+
+                    }
+                }
+            }
+            return resp;
+            
         }
         private string verificalado(string longitud, string lado)
         {
@@ -86,7 +103,7 @@ namespace Final_Modulo1_Arturo
                 r1.ladobase = Convert.ToDouble(ladobaserec.Text);
                 r1.ladoalto = Convert.ToDouble(ladoaltorec.Text);
                 Pila.Push(r1);
-                MessageBox.Show("El cuadrado se creo con exito");
+                MessageBox.Show("El rectangulo se creo con exito");
                 nombrerec.Text="";
                 ladobaserec.Text="";
                 ladoaltorec.Text="";
@@ -143,6 +160,46 @@ namespace Final_Modulo1_Arturo
             
 
 
+        }
+
+        private void mostrardatos_Click(object sender, EventArgs e)
+        {
+            
+            if (datos.Text != "")
+            {
+                if (Pila.Count > 0)
+                {
+                    bool existe = false;
+
+                    //De esta forma muestro sin eliminar de la pila
+                    string t = "";
+                    foreach (var dato in Pila)
+                    {
+                        if ( dato.nombre== datos.Text)
+                        {
+                            t=dato.datos();
+                            existe = true;
+                            break;
+                        }
+                    }
+
+                    if(!existe)
+                        t="No existe en la pila";
+                    MessageBox.Show(t);
+                    
+
+                    
+
+                }
+                else
+                {
+                    MessageBox.Show("Pila de poligonos vacia");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nombre vacio");
+            }
         }
     }
 }

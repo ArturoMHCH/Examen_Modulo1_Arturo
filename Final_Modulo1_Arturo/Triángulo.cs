@@ -57,5 +57,9 @@ namespace Final_Modulo1_Arturo
             }
 
         }
+        public string datos()
+        {
+            return ("Triangulo:"+nombre+"   lado izquierdo:"+ladoizq+"   lado base:"+ladobase+"   angulo izquierdo:"+anguloizq);
+        }
     }
 }

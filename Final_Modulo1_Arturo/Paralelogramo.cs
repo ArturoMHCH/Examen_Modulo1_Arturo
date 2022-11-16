@@ -32,5 +32,9 @@ namespace Final_Modulo1_Arturo
         {
             return (Math.Sin(angulo)*ladoinclinado);
         }
+        public string datos()
+        {
+            return ("Paralelogramo:" + nombre + "   lado base:" + ladobase + "   lado inclinado:" + ladoinclinado + "   angulo:" + angulo);
+        }
     }
 }

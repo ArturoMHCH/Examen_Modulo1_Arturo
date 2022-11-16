@@ -59,11 +59,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.datos = new System.Windows.Forms.TextBox();
+            this.mostrardatos = new System.Windows.Forms.Button();
             this.Contenido = new System.Windows.Forms.Label();
             this.mostrarpila = new System.Windows.Forms.Button();
-            this.mostrardatos = new System.Windows.Forms.Button();
-            this.datos = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -375,6 +375,33 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Pila de Poligonos";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(454, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(159, 15);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Nombre  para mostrar datos:";
+            // 
+            // datos
+            // 
+            this.datos.Location = new System.Drawing.Point(619, 24);
+            this.datos.Name = "datos";
+            this.datos.Size = new System.Drawing.Size(100, 23);
+            this.datos.TabIndex = 13;
+            // 
+            // mostrardatos
+            // 
+            this.mostrardatos.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.mostrardatos.Location = new System.Drawing.Point(733, 23);
+            this.mostrardatos.Name = "mostrardatos";
+            this.mostrardatos.Size = new System.Drawing.Size(94, 23);
+            this.mostrardatos.TabIndex = 2;
+            this.mostrardatos.Text = "Mostrar datos";
+            this.mostrardatos.UseVisualStyleBackColor = true;
+            this.mostrardatos.Click += new System.EventHandler(this.mostrardatos_Click);
+            // 
             // Contenido
             // 
             this.Contenido.AutoSize = true;
@@ -394,32 +421,6 @@
             this.mostrarpila.Text = "Mostrar pila";
             this.mostrarpila.UseVisualStyleBackColor = true;
             this.mostrarpila.Click += new System.EventHandler(this.mostrarpila_Click);
-            // 
-            // mostrardatos
-            // 
-            this.mostrardatos.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.mostrardatos.Location = new System.Drawing.Point(733, 23);
-            this.mostrardatos.Name = "mostrardatos";
-            this.mostrardatos.Size = new System.Drawing.Size(94, 23);
-            this.mostrardatos.TabIndex = 2;
-            this.mostrardatos.Text = "Mostrar datos";
-            this.mostrardatos.UseVisualStyleBackColor = true;
-            // 
-            // datos
-            // 
-            this.datos.Location = new System.Drawing.Point(619, 24);
-            this.datos.Name = "datos";
-            this.datos.Size = new System.Drawing.Size(100, 23);
-            this.datos.TabIndex = 13;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(454, 27);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(159, 15);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Nombre  para mostrar datos:";
             // 
             // Form1
             // 

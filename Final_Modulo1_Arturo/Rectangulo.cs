@@ -17,5 +17,9 @@ namespace Final_Modulo1_Arturo
         {
             return (nombre + " " + area(ladobase, ladoalto).ToString());
         }
+        public string datos()
+        {
+            return ("Rectangulo:" + nombre + "   lado base:" + ladobase + "   lado alto:" + ladoalto);
+        }
     }
 }
