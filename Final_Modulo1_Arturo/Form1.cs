@@ -14,6 +14,7 @@ namespace Final_Modulo1_Arturo
 {
     public partial class Form1 : Form
     {
+        //Pila de poligonos
         Stack<Poligono> Pila = new Stack<Poligono>();
         string mensaje = "";
         public Form1()
