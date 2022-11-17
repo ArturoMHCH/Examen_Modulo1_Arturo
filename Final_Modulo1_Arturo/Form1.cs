@@ -138,7 +138,7 @@ namespace Final_Modulo1_Arturo
             }
             mensaje = "";
         }
-
+        //Este metodo muestra en un label y tiene sroll vertical por si son varias lineas
         private void mostrarpila_Click(object sender, EventArgs e)
         {
             string contenido = "";

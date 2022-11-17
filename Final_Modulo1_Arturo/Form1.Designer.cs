@@ -65,6 +65,7 @@
             this.Contenido = new System.Windows.Forms.Label();
             this.mostrarpila = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -425,17 +426,28 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel1.Controls.Add(this.Contenido);
             this.panel1.Location = new System.Drawing.Point(14, 296);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(546, 171);
             this.panel1.TabIndex = 4;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(125, 271);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(197, 15);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Se muestra el nombre-espacio-area:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 492);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -455,6 +467,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -497,5 +510,6 @@
         private System.Windows.Forms.TextBox datos;
         private System.Windows.Forms.Button mostrardatos;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label15;
     }
 }

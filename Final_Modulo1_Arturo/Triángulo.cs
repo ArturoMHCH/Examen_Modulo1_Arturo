@@ -40,7 +40,7 @@ namespace Final_Modulo1_Arturo
         }
         public string toString()
         {
-            return (nombre + " "+area(ladobase, altura()).ToString());
+            return (nombre + "     " + area(ladobase, altura()).ToString());
         }
         public double altura()
         {

@@ -15,7 +15,7 @@ namespace Final_Modulo1_Arturo
         }
         public string toString()
         {
-            return (nombre + " " + area(ladobase, ladoalto).ToString());
+            return (nombre + "     " + area(ladobase, ladoalto).ToString());
         }
         public string datos()
         {
