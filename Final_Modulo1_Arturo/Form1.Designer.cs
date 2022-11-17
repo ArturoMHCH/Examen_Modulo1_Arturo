@@ -64,10 +64,12 @@
             this.mostrardatos = new System.Windows.Forms.Button();
             this.Contenido = new System.Windows.Forms.Label();
             this.mostrarpila = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -365,20 +367,18 @@
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.datos);
             this.groupBox4.Controls.Add(this.mostrardatos);
-            this.groupBox4.Controls.Add(this.Contenido);
-            this.groupBox4.Controls.Add(this.mostrarpila);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.groupBox4.Location = new System.Drawing.Point(22, 252);
+            this.groupBox4.Location = new System.Drawing.Point(593, 252);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(851, 237);
+            this.groupBox4.Size = new System.Drawing.Size(280, 108);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Pila de Poligonos";
+            this.groupBox4.Text = "Mostrar datos de poligono de pila";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(454, 27);
+            this.label11.Location = new System.Drawing.Point(6, 27);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(159, 15);
             this.label11.TabIndex = 14;
@@ -386,7 +386,7 @@
             // 
             // datos
             // 
-            this.datos.Location = new System.Drawing.Point(619, 24);
+            this.datos.Location = new System.Drawing.Point(171, 27);
             this.datos.Name = "datos";
             this.datos.Size = new System.Drawing.Size(100, 23);
             this.datos.TabIndex = 13;
@@ -394,7 +394,7 @@
             // mostrardatos
             // 
             this.mostrardatos.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.mostrardatos.Location = new System.Drawing.Point(733, 23);
+            this.mostrardatos.Location = new System.Drawing.Point(96, 56);
             this.mostrardatos.Name = "mostrardatos";
             this.mostrardatos.Size = new System.Drawing.Size(94, 23);
             this.mostrardatos.TabIndex = 2;
@@ -405,7 +405,7 @@
             // Contenido
             // 
             this.Contenido.AutoSize = true;
-            this.Contenido.Location = new System.Drawing.Point(20, 59);
+            this.Contenido.Location = new System.Drawing.Point(8, 12);
             this.Contenido.Name = "Contenido";
             this.Contenido.Size = new System.Drawing.Size(173, 15);
             this.Contenido.TabIndex = 1;
@@ -414,7 +414,7 @@
             // mostrarpila
             // 
             this.mostrarpila.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.mostrarpila.Location = new System.Drawing.Point(14, 23);
+            this.mostrarpila.Location = new System.Drawing.Point(12, 267);
             this.mostrarpila.Name = "mostrarpila";
             this.mostrarpila.Size = new System.Drawing.Size(94, 23);
             this.mostrarpila.TabIndex = 0;
@@ -422,15 +422,26 @@
             this.mostrarpila.UseVisualStyleBackColor = true;
             this.mostrarpila.Click += new System.EventHandler(this.mostrarpila_Click);
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.Contenido);
+            this.panel1.Location = new System.Drawing.Point(14, 296);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(546, 171);
+            this.panel1.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 492);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.mostrarpila);
             this.Name = "Form1";
             this.Text = "Examen Modulo1";
             this.groupBox1.ResumeLayout(false);
@@ -441,6 +452,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -483,5 +496,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox datos;
         private System.Windows.Forms.Button mostrardatos;
+        private System.Windows.Forms.Panel panel1;
     }
 }

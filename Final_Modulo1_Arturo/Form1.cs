@@ -147,7 +147,7 @@ namespace Final_Modulo1_Arturo
                 //De esta forma muestro sin eliminar de la pila
                 foreach(var dato in Pila)
                 {
-                    contenido += dato.toString()+"; ";
+                    contenido += dato.toString()+"\n";
                 }
                 
                 
@@ -156,7 +156,9 @@ namespace Final_Modulo1_Arturo
             {
                 MessageBox.Show("Pila de poligonos vacia");
             }
+
             Contenido.Text = contenido;
+            
             
 
 
@@ -201,5 +203,7 @@ namespace Final_Modulo1_Arturo
                 MessageBox.Show("Nombre vacio");
             }
         }
+
+
     }
 }
