@@ -30,7 +30,7 @@ namespace Final_Modulo1_Arturo
         }
         public double altura()
         {
-            return (Math.Sin(angulo)*ladoinclinado);
+            return (Math.Sin((angulo * (Math.PI)) / 180)*ladoinclinado);
         }
         public string datos()
         {
