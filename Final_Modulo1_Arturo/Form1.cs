@@ -55,12 +55,12 @@ namespace Final_Modulo1_Arturo
             }
             return resultado;
         }
-        private string verificaangulo(string angulo)
+        private string verificaangulo(string angulo,int max)
         {
             string resultado = "";
             try
             {
-                resultado = (Convert.ToInt32(angulo) <= 0 || Convert.ToInt32(angulo) >= 180) ? "Angulo no esta en el rango 1-180 grados" : "";
+                resultado = (Convert.ToInt32(angulo) <= 0 || Convert.ToInt32(angulo) > max) ? "Angulo no esta en el rango 1-"+max.ToString()+" grados" : "";
             }
             catch (Exception)
             {
@@ -68,10 +68,11 @@ namespace Final_Modulo1_Arturo
             }
             return resultado;
         }
-        //Boton de crear triangulo
+        //Boton de crear triangulo, solo son necesarios los datos del formulario para que no haya errores en el triangulo
+        //Es decir son los datos minimos necesarios, los demas se pueden calcular con estos datos de ingreso
         private void creartri_Click(object sender, EventArgs e)
         {
-            mensaje += verificanombre(nombretri.Text) + verificalado(ladoizqtri.Text,"izquierdo") + verificalado(ladobasetri.Text,"base") + verificaangulo(angulotri.Text);
+            mensaje += verificanombre(nombretri.Text) + verificalado(ladoizqtri.Text,"izquierdo") + verificalado(ladobasetri.Text,"base") + verificaangulo(angulotri.Text,179);
             if (mensaje=="")
             {
                 Triángulo t1 = new Triángulo();
@@ -118,7 +119,8 @@ namespace Final_Modulo1_Arturo
         //Boton para crear paralelogramo
         private void crearpar_Click(object sender, EventArgs e)
         {
-            mensaje += verificanombre(nombrepar.Text) + verificalado(ladobasepar.Text, "base") + verificalado(ladoinclinadopar.Text, "inclinado") + verificaangulo(angulopar.Text);
+            //en angulo es de 1 a 90 grados, por que en la teoria un cuadrado o rectangulo son paralelogramos
+            mensaje += verificanombre(nombrepar.Text) + verificalado(ladobasepar.Text, "base") + verificalado(ladoinclinadopar.Text, "inclinado") + verificaangulo(angulopar.Text,90);
             if (mensaje == "")
             {
                 Paralelogramo p1 = new Paralelogramo();
